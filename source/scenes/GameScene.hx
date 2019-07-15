@@ -44,7 +44,7 @@ class GameScene extends Scene {
     public static var difficulty:Int = NORMAL;
     public static var lastMusicChoice:Int = -1;
 
-    public static var depth:Int = 7;
+    public static var depth:Int = 6;
 
     private var mapBlueprint:Grid;
     private var map:Grid;
@@ -677,15 +677,15 @@ class GameScene extends Scene {
         for(enemyPoint in enemyPoints) {
             var choice = Random.randInt(3);
             var enemy:MemoryEntity;
-            if(choice == 0) {
-                enemy = new Bouncer(enemyPoint.point.x, enemyPoint.point.y);
-            }
-            else if(choice == 1) {
-                enemy = new Follower(enemyPoint.point.x, enemyPoint.point.y);
-            }
-            else {
-                enemy = new Ghost(enemyPoint.point.x, enemyPoint.point.y);
-            }
+            //if(choice == 0) {
+                //enemy = new Bouncer(enemyPoint.point.x, enemyPoint.point.y);
+            //}
+            //else if(choice == 1) {
+                enemy = new Booster(enemyPoint.point.x, enemyPoint.point.y);
+            //}
+            //else {
+                //enemy = new Ghost(enemyPoint.point.x, enemyPoint.point.y);
+            //}
             add(enemy);
             allEnemies.push(enemy);
         }
@@ -703,8 +703,8 @@ class GameScene extends Scene {
                 enemy = new Roombad(enemyPoint.point.x, enemyPoint.point.y);
             }
             enemy.y += Segment.TILE_SIZE - enemy.height;
-            add(enemy);
-            allEnemies.push(enemy);
+            //add(enemy);
+            //allEnemies.push(enemy);
         }
 
         // Add traps
