@@ -38,7 +38,7 @@ class GhostAlt extends MemoryEntity {
         velocity = new Vector2(0, 0);
         setHitbox(30, 30);
         isActive = false;
-        hum = new Sfx("audio/ghost.wav");
+        hum = new Sfx("audio/ghostalt.wav");
         hum.volume = 0;
         health = 1;
         bob = new NumTween(TweenType.PingPong);

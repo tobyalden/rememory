@@ -23,7 +23,7 @@ class HopperAlt extends MemoryEntity {
 
     public function new(x:Float, y:Float) {
         super(x, y);
-        MemoryEntity.loadSfx(["hopperjump", "hopperland"]);
+        MemoryEntity.loadSfx(["hopperaltjump", "hopperaltland"]);
         type = "enemy";
         sprite = new Spritemap("graphics/hopperalt.png", 24, 24);
         sprite.add("idle", [0, 1], 5);
