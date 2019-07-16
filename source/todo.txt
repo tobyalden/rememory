@@ -1,6 +1,11 @@
 ACTUAL TODO:
-- Only use letterbox on desktop
+- 6 new enemies
+- 1 new trap
+- 1 new character
+- 1 new boss (or elaborate on existing boss)
+- remix music
+- fix aiming so you stand still
 
 FINAL TOUCHES:
-+ disable up/down scroll keys in JS
+- disable up/down scroll keys in JS
 + remove debug controls
