@@ -13,8 +13,7 @@ class Booster extends MemoryEntity {
     public static inline var MAX_SPEED = 4.7;
     public static inline var BOUNCE_FACTOR = 0.85;
     public static inline var HIT_KNOCKBACK = 3;
-    //public static inline var ACTIVATE_DISTANCE = 150;
-    public static inline var ACTIVATE_DISTANCE = 2;
+    public static inline var ACTIVATE_DISTANCE = 150;
     public static inline var HUM_DISTANCE = 280;
     public static inline var TIME_BETWEEN_BOOSTS = 2;
 
