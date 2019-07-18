@@ -94,7 +94,7 @@ class Arrow extends MemoryEntity {
     }
 
     public override function moveCollideX(e:Entity) {
-        if(e.type == "enemy" || e.type == "mine" || e.type == "ghost") {
+        if(e.type == "enemy" || e.type == "mine" || e.type == "ghost" || e.type == "bubble") {
             setLanded(true, false);
             setAnchor(e);
             var towardsEnemy = new Vector2(
@@ -111,15 +111,22 @@ class Arrow extends MemoryEntity {
         }
         var hitVolume = Math.min(velocity.length / INITIAL_VELOCITY, 1);
         if(!isScattered) {
-            MemoryEntity.allSfx[
-                'arrowhit${HXP.choose(1, 2, 3)}'
-            ].play(hitVolume/3);
+            if(e.name == "roombadalt") {
+                MemoryEntity.allSfx[
+                    'roombadalthit${HXP.choose(1, 2, 3)}'
+                ].play(hitVolume/2);
+            }
+            else {
+                MemoryEntity.allSfx[
+                    'arrowhit${HXP.choose(1, 2, 3)}'
+                ].play(hitVolume/3);
+            }
         }
         return true;
     }
 
     public override function moveCollideY(e:Entity) {
-        if(e.type == "enemy" || e.type == "mine" || e.type == "ghost") {
+        if(e.type == "enemy" || e.type == "mine" || e.type == "ghost" || e.type == "bubble") {
             setLanded(true, false);
             setAnchor(e);
             var towardsEnemy = new Vector2(

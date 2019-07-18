@@ -342,7 +342,7 @@ class Player extends MemoryEntity {
         }
         for(hazardType in [
             "mine", "enemy", "grenade", "explosion", "roboplant", "ghost",
-            "boss"
+            "boss", "bubble"
         ]) {
             var hazard = collide(hazardType, x, y);
             if(hazard != null) {
@@ -352,6 +352,9 @@ class Player extends MemoryEntity {
                 }
                 else if(hazardType == "grenade") {
                     cast(hazard, Grenade).detonate();
+                }
+                else if(hazardType == "bubble") {
+                    cast(hazard, Bubble).pop();
                 }
             }
         }
